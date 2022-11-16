@@ -1,6 +1,6 @@
 # Algoritma dan Pemrograman
 
--Fakultas Teknik Universitas Udayana-
+-Teknologi Informasi Fakultas Teknik Universitas Udayana-
 
 Nama    : Pande Komang Indah Triroshanti
 
