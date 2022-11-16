@@ -1,1 +1,317 @@
+//Nama	: Pande Komang Indah Triroshanti
+//NIM	: 2205551053
+//Kelas	: C
 
+#include<stdio.h>
+
+float luas_pp(float p, float l);
+float kll_pp(float p, float l);
+int persegi_panjang();
+float v_balok (float a, float b, float c);
+float lp_balok (float a, float b, float c);
+int balok();
+float v_air (float d, float t);
+float d_air (float v, float t);
+float t_air (float v, float d);
+void menuDebit();
+int volume_air();
+int debit_air();
+int waktu_air();
+float nilai_kecepatan (float v, float t);
+int kecepatan();
+
+int main(){
+    int menu;
+    printf("\t\t==============================================\n");
+    printf("\t\t||         PROGRAM OPERASI ARITMATIKA       ||\n");
+    printf("\t\t||==========================================||\n");
+    printf("\t\t||            Pilihan Program :             ||\n");
+    printf("\t\t||                                          ||\n");
+    printf("\t\t|| [1] Luas dan Keliling Persegi Panjang    ||\n");                           
+    printf("\t\t|| [2] Volume dan Luas Permukaan Balok      ||\n");  
+    printf("\t\t|| [3] Volume, Debit dan Waktu Air          ||\n");                    
+    printf("\t\t|| [4] Kecepatan                            ||\n");  
+    printf("\t\t|| [5] Exit                                 ||\n"); 
+    printf("\t\t==============================================\n");
+    printf("\t\tInputkan pilihan program :");
+    while (scanf("%d", &menu)==0 || menu < 1 || menu > 5){
+	printf("\t\t----------------------------------------------\n");
+        printf("\t\tKarakter yang Anda inputkan salah!\n");
+        printf("\t\tMohon inputkan pilihan yang benar.\n");
+        printf("\t\t----------------------------------------------\n");
+        printf("\t\tInputkan pilihan menu:");
+	int c;
+        while((c=getchar())!='\n' && c!=EOF);
+	}
+    
+     if(menu==1){
+        persegi_panjang();
+    }else if(menu==2){
+        balok();
+    }else if(menu==3){
+	menuDebit();
+    }else if(menu==4){
+        kecepatan();
+    }else (menu==5); 
+	{
+       	printf("\t\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
+	printf("\t\tTERIMA KASIH SUDAH MENGGUNAKAN PROGRAM INI \n");
+	printf("\t\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n"); 
+	}
+}
+
+float luas_pp(float p, float l){
+	float luas;
+	luas = p*l;
+	return luas;
+}
+float kll_pp(float p, float l){
+	float kll;
+	kll = 2*(p+l);
+	return kll;
+}
+int persegi_panjang (){
+	float panjang, lebar;
+	printf("\t\t-------------------------------------------\n");
+	printf("\t\tMenghitung Luas dan Keliling Persegi Panjang\n\n");
+	printf("\t\tMasukan panjang :");
+	while (scanf("%f", &panjang)==0 || panjang < 1){
+		printf("\t\t----------------------------------------------\n");
+        	printf("\t\tKarakter yang Anda masukan salah\n");
+        	printf("\t\tMasukan angka yang benar!\n");
+        	printf("\t\t----------------------------------------------\n");
+		printf("\t\tMasukkan panjang :");
+		int c;
+		while((c=getchar())!='\n' && c!=EOF);
+	}
+  	printf("\t\tMasukkan lebar :");
+  	while (scanf("%f", &lebar)==0 || lebar < 1){
+		printf("\t----------------------------------------------\n");
+        	printf("\t\tKarakter yang Anda Masukan salah\n");
+        	printf("\t\tMasukan angka yang benar!\n");
+        	printf("\t\t----------------------------------------------\n");
+		printf("\t\tMasukkan lebar :");
+		int c;
+		while((c=getchar())!='\n' && c!=EOF);
+  	}
+  	printf("\t\t-------------------------------------------\n");
+  	printf("\t\tLuas Persegi Panjang Adalah %.2f\n", luas_pp(panjang,lebar));
+  	printf("\t\tKeliling Persegi Panjang Adalah %.2f\n", kll_pp(panjang,lebar));
+  	printf("\t\t-------------------------------------------\n");
+  	return 0;
+}
+
+float v_balok (float a, float b, float c){
+	float volume;
+	volume = a*b*c;
+	return volume;
+}
+float lp_balok (float a, float b, float c){
+	float luas_permukaan;
+	luas_permukaan = 2*(a*b + a*c + b*c);
+	return luas_permukaan;
+}
+int balok(){
+	float panjang, lebar, tinggi;
+	printf("\t\t-------------------------------------------\n");
+	printf("\t\tMenghitung Volume dan Luas Permukaan Balok \n\n");
+	printf("\t\tMasukan panjang : ");
+	while (scanf("%f", &panjang)==0 || panjang < 1){
+		printf("\t\t----------------------------------------------\n");
+        	printf("\t\tKarakter yang Anda Masukan salah\n");
+        	printf("\t\tMasukan angka yang benar!\n");
+        	printf("\t\t----------------------------------------------\n");
+		printf("\t\tMasukkan panjang :");
+		int c;
+		while((c=getchar())!='\n' && c!=EOF);
+  	}
+  	printf("\t\tMasukkan lebar : ");
+  	while (scanf("%f", &lebar)==0 || lebar < 1){
+		printf("\t\t----------------------------------------------\n");
+        	printf("\t\tKarakter yang Anda Masukan salah\n");
+        	printf("\t\tMasukan angka yang benar!\n");
+        	printf("\t\t----------------------------------------------\n");
+		printf("\t\tMasukkan lebar :");
+		int c;
+		while((c=getchar())!='\n' && c!=EOF);
+  	}
+  	printf("\t\tMasukkan tinggi : ");
+   	while (scanf("%f", &tinggi)==0 || tinggi < 1){
+		printf("\t\t----------------------------------------------\n");
+      		printf("\t\tKarakter yang Anda Masukan salah\n");
+       		printf("\t\tMasukan angka yang benar!\n");
+        	printf("\t\t----------------------------------------------\n");
+		printf("\t\tMasukkan tinggi :");
+		int c;
+		while((c=getchar())!='\n' && c!=EOF);
+  	}
+  	printf("\t\t-------------------------------------------\n");
+  	printf("\t\tVolume Balok adalah %.2f\n", v_balok(panjang,lebar,tinggi));
+  	printf("\t\tLuas Permukaan Balok adalah %.2f\n", lp_balok(panjang,lebar,tinggi));
+  	printf("\t\t-------------------------------------------\n");
+  	return 0;
+}
+
+float v_air (float d, float t){
+    float vAir;
+    vAir = d*t;
+    return vAir;
+}
+float d_air (float v, float t){
+	float dAir;
+	dAir = v/t;
+	return dAir;
+}
+float t_air (float v, float d){
+    float tAir;
+    tAir = v/d;
+    return tAir;
+}
+void menuDebit(){
+    int mDebit;
+    printf("\t\t==============================================\n");
+    printf("\t\t||              PROGRAM OPERASI             ||\n");
+    printf("\t\t||        VOLUME, DEBIT, DAN WAKTU AIR      ||\n");
+    printf("\t\t||==========================================||\n");
+    printf("\t\t||                                          ||\n");
+    printf("\t\t|| [1] Menghitung Volume Air                ||\n");                           
+    printf("\t\t|| [2] Menghitung Debit Air                 ||\n");  
+    printf("\t\t|| [3] Menghitung Waktu Air                 ||\n");                    
+    printf("\t\t==============================================\n");
+    printf("\t\tInputkan pilihan operasi :");
+    while (scanf("%d", &mDebit)==0 || mDebit < 1 || mDebit > 3){
+	printf("\t\t----------------------------------------------\n");
+        printf("\t\tKarakter yang Anda inputkan salah!\n");
+        printf("\t\tMohon inputkan pilihan yang benar.\n");
+        printf("\t\t----------------------------------------------\n");
+        printf("\t\tInputkan pilihan operasi:");
+	int c;
+        while((c=getchar())!='\n' && c!=EOF);
+	}
+    
+     if(mDebit==1){
+        volume_air();
+    }else if(mDebit==2){
+        debit_air();
+    }else{
+	waktu_air();
+    }
+}
+int volume_air(){
+	float debit, waktu;
+	printf("\t\t------------------------------------------\n");
+	printf("\t\tMenghitung volume Air \n\n");
+	printf("\t\tMasukan debit (dalam satuan liter/detik): ");
+	while (scanf("%f", &debit)==0 || debit < 1){
+		printf("\t\t----------------------------------------------\n");
+      		printf("\t\tKarakter yang Anda Masukan salah\n");
+       		printf("\t\tMasukan angka yang benar!\n");
+        	printf("\t\t----------------------------------------------\n");
+		printf("\t\tMasukkan debit :");
+		int c;
+		while((c=getchar())!='\n' && c!=EOF);
+  	}
+  	printf("\t\tMasukkan waktu (dalam satuan detik) : ");
+  	while (scanf("%f", &waktu)==0 || waktu < 1){
+		printf("\t\t----------------------------------------------\n");
+      		printf("\t\tKarakter yang Anda Masukan salah\n");
+       		printf("\t\tMasukan angka yang benar!\n");
+        	printf("\t\t----------------------------------------------\n");
+		printf("\t\tMasukkan waktu :");
+		int c;
+		while((c=getchar())!='\n' && c!=EOF);
+  	}
+  	printf("\t\t-------------------------------------------\n");
+  	printf("\t\tNilai Volume Adalah %.2f\n", v_air(debit,waktu));
+  	return 0;
+}
+int debit_air(){
+	float volume, waktu;
+	printf("\t\t---------------------------------------------\n");
+	printf("\t\tMenghitung Debit \n\n");
+	printf("\t\tMasukan volume (dalam satuan liter) : ");
+	while (scanf("%f", &volume)==0 || volume < 1){
+		printf("\t\t----------------------------------------------\n");
+      		printf("\t\tKarakter yang Anda Masukan salah\n");
+       		printf("\t\tMasukan angka yang benar!\n");
+        	printf("\t\t----------------------------------------------\n");
+		printf("\t\tMasukkan volume :");
+		int c;
+		while((c=getchar())!='\n' && c!=EOF);
+  	}
+  	printf("\t\tMasukkan waktu (dalam satuan detik) : ");
+  	while (scanf("%f", &waktu)==0 || waktu < 1){
+		printf("\t\t----------------------------------------------\n");
+      		printf("\t\tKarakter yang Anda Masukan salah\n");
+       		printf("\t\tMasukan angka yang benar!\n");
+        	printf("\t\t----------------------------------------------\n");
+		printf("\t\tMasukkan waktu :");
+		int c;
+		while((c=getchar())!='\n' && c!=EOF);
+  	}
+  	printf("\t\t--------------------------------------------\n");
+  	printf("\t\tNilai Debit Adalah %.2f\n", d_air(volume,waktu));
+  	return 0;
+}
+int waktu_air(){
+	float volume, debit;
+	printf("\t\t-----------------------------------------------\n");
+	printf("\t\tMenghitung Waktu Air\n\n");
+	printf("\t\tMasukan volume (dalam satuan liter) : ");
+	while (scanf("%f", &volume)==0 || volume < 1){
+		printf("\t\t----------------------------------------------\n");
+      		printf("\t\tKarakter yang Anda Masukan salah\n");
+       		printf("\t\tMasukan angka yang benar!\n");
+        	printf("\t\t----------------------------------------------\n");
+		printf("\t\tMasukkan volume :");
+		int c;
+		while((c=getchar())!='\n' && c!=EOF);
+  	}
+  	printf("\t\tMasukkan debit (dalam satuan liter/detik) : ");
+  	while (scanf("%f", &debit)==0 || debit < 1){
+		printf("\t\t----------------------------------------------\n");
+      		printf("\t\tKarakter yang Anda Masukan salah\n");
+       		printf("\t\tMasukan angka yang benar!\n");
+        	printf("\t\t----------------------------------------------\n");
+		printf("\t\tMasukkan debit :");
+		int c;
+		while((c=getchar())!='\n' && c!=EOF);
+  	}
+  	printf("\t\t------------------------------------------------\n");
+  	printf("\t\tLama Waktu Adalah %.2f\n", t_air(volume,debit));
+  	return 0;
+}
+
+float nilai_kecepatan (float v, float t){
+	float nkecepatan;
+	nkecepatan = v/t;
+	return nkecepatan;
+}
+int kecepatan(){
+	float jarak, waktu;
+	printf("\t\t--------------------------------------\n");
+	printf("\t\t        Menghitung Kecepatan \n\n"	   );
+	printf("\t\tMasukan Jarak (dalam satuan meter) : ");
+	while (scanf("%f", &jarak)==0 || jarak < 1){
+		printf("\t\t----------------------------------------------\n");
+        	printf("\t\tKarakter yang Anda Masukan salah\n");
+        	printf("\t\tMasukan angka yang benar!\n");
+        	printf("\t\t----------------------------------------------\n");
+		printf("\t\tMasukkan jarak :");
+		int c;
+		while((c=getchar())!='\n' && c!=EOF);
+  	}
+ 	printf("\t\tMasukkan Waktu (dalam satuan detik) :");
+  	while (scanf("%f", &waktu)==0 || waktu < 1){
+		printf("\t\t----------------------------------------------\n");
+       		printf("\t\tKarakter yang Anda Masukan salah\n");
+        	printf("\t\tMasukan angka yang benar!\n");
+        	printf("\t\t----------------------------------------------\n");
+		printf("\t\tMasukkan waktu :");
+		int c;
+		while((c=getchar())!='\n' && c!=EOF);
+  	}
+  	printf("\t\t--------------------------------------\n");
+  	printf("\t\tNilai Kecepatan Adalah %.2f\n", nilai_kecepatan(jarak, waktu));
+  	return 0;
+}
