@@ -1,3 +1,6 @@
+//Pande Komang Indah Triroshanti
+//2205551053
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
